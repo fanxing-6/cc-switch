@@ -9,6 +9,7 @@ import { useTranslation } from "react-i18next";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Loader2, TestTube2, Search, Eye, EyeOff, X } from "lucide-react";
+import { AppEgressSettings } from "./AppEgressSettings";
 import {
   useGlobalProxyUrl,
   useSetGlobalProxyUrl,
@@ -253,6 +254,8 @@ export function GlobalProxySettings() {
           </Button>
         </div>
       </div>
+
+      <AppEgressSettings />
 
       {/* 扫描结果 */}
       {detected.length > 0 && (

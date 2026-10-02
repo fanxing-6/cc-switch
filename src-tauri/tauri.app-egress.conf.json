@@ -1,0 +1,15 @@
+{
+  "bundle": {
+    "targets": ["app"],
+    "createUpdaterArtifacts": false,
+    "macOS": { "minimumSystemVersion": "26.0" },
+    "resources": {
+      "../work/per-app-vpn-probe/CCSwitchNetworkProbe.app/": "CCSwitchNetworkProbe.app/"
+    }
+  },
+  "plugins": {
+    "updater": {
+      "endpoints": ["https://github.com/fanxing-6/cc-switch/releases/latest/download/latest.json"]
+    }
+  }
+}

@@ -49,6 +49,7 @@ pub fn set_global_proxy_url(state: tauri::State<'_, AppState>, url: String) -> R
 
     // 1. 先验证代理配置是否有效（不应用）
     http_client::validate_proxy(url_opt)?;
+    super::update_application_upstream(&url)?;
 
     // 2. 验证成功后保存到数据库
     state
